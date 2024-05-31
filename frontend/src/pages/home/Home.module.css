@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins');
+
+.headline
+{
+    padding: 0 80px;
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/fans.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.headline img
+{
+    width: 650px;
+}
+
+.left
+{
+    width: 600px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left h1
+{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.left p
+{
+    margin: 30px 0;
+}
+
+.left a
+{
+    text-align: center;
+    background-color: #fcba03;
+    color: black;
+    text-decoration: none;
+    width: 200px;
+    padding: 15px;
+    border-radius: 60px;
+    border: 3px solid black;
+    transition: ease 0.25s all;
+}
+
+.left a:hover
+{
+    background-color: whitesmoke;
+    color: #fcba03;
+    border-color: #fcba03;
+}
