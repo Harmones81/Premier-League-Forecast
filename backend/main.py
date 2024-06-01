@@ -68,13 +68,13 @@ def get_teams():
     return jsonify(team_df.to_dict(orient='records')), 200
 
 # route that gets the data for the specified team
-@app.route('/<team_name>', methods=['GET'])
+@app.route('/teams/<team_name>', methods=['GET'])
 def get_team(team_name):
     selected_team = team_df[team_df['Team'] == team_name]
     return jsonify(selected_team.to_dict(orient='records')), 200
 
 # route that gets the attack and defense ratings for the specified team
-@app.route('/ratings/<team_name>', methods=['GET'])
+@app.route('/teams/ratings/<team_name>', methods=['GET'])
 def get_ratings(team_name):
     team_att_rating = att_rating(team_name)
     team_def_rating = def_rating(team_name)
@@ -82,14 +82,14 @@ def get_ratings(team_name):
     return jsonify(ratings), 200
 
 # route that gets the expected goals in a head-to-head between 2 specified teams
-@app.route('/xG/<home_team>/<away_team>', methods=['GET'])
+@app.route('/match/custom/xG/<home_team>/<away_team>', methods=['GET'])
 def get_xG(home_team, away_team):
     home_expected_goals, away_expected_goals = expected_goals(home_team, away_team)
     results = {'homeXG': home_expected_goals, 'awayXG': away_expected_goals}
     return jsonify(results), 200
 
 # route that gets the probability of both teams scoring a certain amount of goals
-@app.route('/probs/<home_team>/<away_team>', methods=['GET'])
+@app.route('/match/custom/probs/<home_team>/<away_team>', methods=['GET'])
 def get_probs(home_team, away_team):
     home_XG, away_XG = expected_goals(home_team, away_team)
     home_dist = np.random.poisson(lam=home_XG, size=1000)
