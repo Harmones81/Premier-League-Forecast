@@ -135,14 +135,14 @@ def update_database():
 # APP ROUTES ----------------------------------------------------------------------------------------------------------------------------------
 
 
-@app.route('/teams', methods=['GET'])
+@app.route('/teams', methods=['GET', 'POST'])
 def get_teams():
     teams = Team.query.all()
     json_teams = list(map(lambda x: x.to_json(), teams))
     return jsonify({'teams': json_teams}), 200
 
 
-@app.route('/teams/<team_name>', methods=['GET'])
+@app.route('/teams/<team_name>', methods=['GET', 'POST'])
 def get_team(team_name: str):
     """Gets a team from the database using the given team name"""
     selected_team: Team = Team.query.filter_by(team_name=team_name).first()
@@ -152,7 +152,7 @@ def get_team(team_name: str):
     return jsonify({'team': json_team}), 200
 
 
-@app.route('/ratings/<team_name>', methods=['GET'])
+@app.route('/ratings/<team_name>', methods=['GET', 'POST'])
 def get_team_rating(team_name: str):
     """Calculates the offensive and defensive ratings for the given team"""
     team_att_rating = att_rating(team_name)
