@@ -8,7 +8,7 @@ from scraper import teams_dict
 # DB FUNCTIONS --------------------------------------------------------------------------------------------------------------------------------
 
 
-def reset_database():
+def reset():
     """Deletes all the records from the database"""
     teams = Team.query.all()
     for team in teams:
@@ -16,7 +16,7 @@ def reset_database():
     db.session.commit()
 
 
-def add_to_database():
+def populate():
     """Adds new records to the database"""
     teams = teams_dict()
 
@@ -46,6 +46,11 @@ def add_to_database():
             db.session.commit()
         except Exception as e:
             return jsonify({'message': str(e)}), 400
+        
+
+def update():
+    reset()
+    populate()
 
 
 # APP FUNCTIONS -------------------------------------------------------------------------------------------------------------------------------
@@ -123,8 +128,7 @@ def dist_to_dict(dist) -> dict:
 @app.route('/update', methods=['POST'])
 def update_database():
     """Removes all the records from the database and adds new items"""
-    reset_database()
-    add_to_database()
+    update()
     return jsonify({'message': 'Database successfully updated.'}), 200
 
 
@@ -180,4 +184,5 @@ def get_probs(home_team: str, away_team: str):
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
+        update()
     app.run(debug=True)
