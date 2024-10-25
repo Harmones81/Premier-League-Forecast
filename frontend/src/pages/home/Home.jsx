@@ -21,7 +21,7 @@ const Home = () =>
                 <img src={playerImg}/>
             </section>
         </>
-    )
-}
+    );
+};
 
 export default Home;
