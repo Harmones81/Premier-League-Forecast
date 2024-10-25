@@ -13,8 +13,8 @@ const Header = () =>
         <header>
             <Link to="/" className={styles.logo}>PLF</Link>
             <div className={styles.links}>
-                <Link to="/overview">Overview</Link>
-                <Link to="/predictions">Predictions</Link>
+                <Link to="/overview">Home</Link>
+                <Link to="/predictions">Overview</Link>
                 <Link to="/about">About</Link>
             </div>
             <div className={styles.socials}>
