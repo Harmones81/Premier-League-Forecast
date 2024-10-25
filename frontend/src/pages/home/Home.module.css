@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins');
+
+.headline
+{
+    padding: 0 80px;
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/fans.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.headline img
+{
+    width: 650px;
+}
+
+.left
+{
+    width: 600px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left h1
+{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.left p
+{
+    margin: 30px 0;
+}
+
+.left a
+{
+    text-align: center;
+    background-color: #fcba03;
+    color: black;
+    text-decoration: none;
+    width: 200px;
+    padding: 15px;
+    border-radius: 60px;
+    border: 3px solid black;
+    transition: ease 0.25s all;
+}
+
+.left a:hover
+{
+    background-color: whitesmoke;
+    color: #fcba03;
+    border-color: #fcba03;
+}
+
+.content
+{
+    background-color: rgb(33, 33, 33);
+    padding: 100px 80px;
+}
+
+.content .separator
+{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    align-items: center;
+}
+
+.content h2
+{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.content p
+{
+    margin-bottom: 15px;
+}
+
+.content hr
+{
+    border-color: #fcba03;
+    margin-bottom:80px;
+}
+
+.features
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.item
+{
+    background-color: #fcba03;
+    color: black;
+    padding: 40px;
+    border-radius: 40px;
+    width: 30%;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.item h3
+{
+    font-size: 25px;
+}
+
+.item img
+{
+    width: 60%;
+    margin: 30px;
+}
