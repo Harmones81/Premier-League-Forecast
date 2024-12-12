@@ -1,0 +1,74 @@
+/* Main Header CSS */
+
+.main-header
+{
+    background-color: #38003c;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-icon
+{
+    color: white;
+    transition: ease 0.35s all;
+}
+
+.header-icon:hover
+{
+    color: #00ff85;
+}
+
+.page-nav
+{
+    padding: 20px 0;
+    margin-left: 80px;
+}
+
+.page-nav a
+{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: ease 0.35s all;
+}
+
+.page-nav a:hover
+{
+    color: #00ff85;
+}
+
+.page-nav a:not(:last-child)
+{
+    margin-right: 30px;
+}
+
+.socials-nav a:not(:last-child)
+{
+    margin-right: 25px;
+}
+
+/* Sub-Header CSS */
+
+.sub-header
+{
+    padding: 15px 80px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.sub-header img
+{
+    cursor: pointer;
+    width: 30px;
+    transition: ease 0.35s all;
+}
+
+.sub-header img:hover
+{
+    transform: scale(1.3);
+}
