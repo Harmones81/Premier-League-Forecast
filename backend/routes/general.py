@@ -1,5 +1,5 @@
-from flask import Blueprint, jsonify
-from config import team_db, fixture_db
+from flask import Blueprint, jsonify, send_from_directory
+from config import app, team_db, fixture_db
 from scraper import scrape_team_data, scrape_fixture_data
 
 general_routes = Blueprint('general', __name__)
@@ -23,3 +23,7 @@ def update_fixture_database():
         return jsonify({'message': 'Fixtures created/updated successfully!'}), 200
     except Exception as e:
         return jsonify({'error_msg': f'Could not update the fixture database: {e}'})
+    
+@general_routes.route('/serve/images/<filename>', methods=['GET'])
+def serve_image(filename: str):
+    return send_from_directory(app.config['ASSET_DIR'], filename)

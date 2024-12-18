@@ -10,7 +10,7 @@ const Header = () => {
     useEffect(() => {
         fetch('http://127.0.0.1:5000/teams')
             .then(response => response.json())
-            .then(data => setImages(data))
+            .then(data => setImages(data));
     }, []);
 
     const displayTeamLogos = () => {
@@ -20,12 +20,12 @@ const Header = () => {
         {
             let src = images[i].Logo;
             let splitSrc = src.split("\\");
-            let finalSrc = splitSrc.join("/");
+            let finalSrc = splitSrc[1];
             console.log(finalSrc);
 
             elements.push(
                 <Link to="" key={i}>
-                    <img src={`../../../../backend/${finalSrc}`}/>
+                    <img src={`http://localhost:5000/serve/images/${finalSrc}`}/>
                 </Link>
             );
         }

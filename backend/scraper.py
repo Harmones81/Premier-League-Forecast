@@ -1,6 +1,7 @@
 import os
 import requests
 import pandas as pd
+from config import app
 
 teams_url = 'https://www.skysports.com/premier-league-table'
 
@@ -49,15 +50,15 @@ def scrape_fixture_data() -> list[dict]:
 def save_img(img_urls: list[str]) -> list[str]:
     filenames = []
     # Create the folder if it doesn't exist
-    if not os.path.exists('images'):
-        os.makedirs('images')
+    if not os.path.exists(app.config['ASSET_DIR']):
+        os.makedirs(app.config['ASSET_DIR'])
     for i, url in enumerate(img_urls):
         try:
             response = requests.get(url, stream=True)
             response.raise_for_status()  # Check if the request was successful
             # Create a unique filename for each image
             file_extension = url.split('.')[-1].split('?')[0]  # Handle query params in URLs
-            filename = os.path.join('images', f"logo_{i + 1}.{file_extension}")
+            filename = os.path.join(app.config['ASSET_DIR'], f"logo_{i + 1}.{file_extension}")
             filenames.append(filename)
             # Write the content to a file
             with open(filename, 'wb') as f:
