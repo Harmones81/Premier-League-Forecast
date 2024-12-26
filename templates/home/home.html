@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League Forecast - Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Albert+Sans">
+</head>
+<body>
+    <header>
+        <section class="main-header">
+            <a href="#" class="logo"><ion-icon name="football-outline"></ion-icon></a>
+            <div class="nav">
+                <a>Home</a>
+                <a>Results</a>
+                <a>Fixtures</a>
+                <a>Table</a>
+            </div>
+            <div class="socials">
+                <a href="mailto:harmonyiroha99@gmail.com"><ion-icon name="mail-outline"></ion-icon></a>
+                <a href="https://github.com/Harmones81" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                <a href="https://www.linkedin.com/in/harmony-iroha/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </div>
+        </section>
+
+        <section class="sub-header" id="sub-header"></section>
+    </header>
+
+    <section class="headline">
+        <h1>Next Fixture</h1>
+        <div class="next-fixture">
+            <div class="next-fixture-team">
+                <img src="../logos/logo_18.png">
+                <p>Ipswich Town</p>
+            </div>
+            <div class="next-fixture-info">
+                <h1>VS</h1>
+                <p>Tomorrow, 3:00 pm</p>
+                <p>Venue: London Stadium, UK</p>
+            </div>
+            <div class="next-fixture-team">
+                <img src="../logos/logo_14.png">
+                <p>West Ham United</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="next-gameweek">
+            <h1>
+                Next Gameweek
+                <p>Gameweek 18</p>
+            </h1>
+            <ul>
+                <li>
+                    <a href="#">
+                        <div>
+                            <div class="next-gameweek-team">
+                                <img src="../logos/logo_12.png"> <div>Newcastle United</div>
+                            </div>
+                            <div class="next-gameweek-team">
+                                <img src="../logos/logo_13.png"> <div>Manchester United</div>
+                            </div>
+                        </div>
+                        <div class="next-gameweek-info">
+                            <p>Saturday, Dec 22</p>
+                            <p>7:30 am</p>
+                            <p>Venue: Old Trafford</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div>
+                            <div class="next-gameweek-team">
+                                <img src="../logos/logo_16.png"> <div>Everton</div>
+                            </div>
+                            <div class="next-gameweek-team">
+                                <img src="../logos/logo_15.png"> <div>Crystal Palace</div>
+                            </div>
+                        </div>
+                        <div class="next-gameweek-info">
+                            <p>Saturday, Dec 22</p>
+                            <p>9:00 am</p>
+                            <p>Venue: Selhurst Park</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div>
+                            <div class="next-gameweek-team">
+                                <img src="../logos/logo_2.png"> <div>Chelsea</div>
+                            </div>
+                            <div class="next-gameweek-team">
+                                <img src="../logos/logo_8.png"> <div>Fulham</div>
+                            </div>
+                        </div>
+                        <div class="next-gameweek-info">
+                            <p>Saturday, Dec 22</p>
+                            <p>3:00 pm</p>
+                            <p>Venue: Stamford Bridge</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        function displayTeams(imageNames)
+        {
+            const subHeader = document.getElementById("sub-header");
+
+            imageNames.forEach(element => {
+                const img = document.createElement('img');
+                img.src = `../logos/${element}`;
+
+                subHeader.appendChild(img);
+            });
+        }
+
+        const imageNames = ['logo_1.png', 'logo_2.png', 'logo_3.png', 'logo_4.png', 'logo_5.png', 'logo_6.png', 'logo_7.png',
+            'logo_8.png', 'logo_9.png', 'logo_10.png', 'logo_11.png', 'logo_12.png', 'logo_13.png', 'logo_14.png', 'logo_15.png',
+            'logo_16.png', 'logo_17.png', 'logo_18.png', 'logo_19.png', 'logo_20.png'
+        ]
+
+        displayTeams(imageNames);
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
