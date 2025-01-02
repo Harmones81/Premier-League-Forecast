@@ -1,0 +1,55 @@
+.table
+{
+    padding: 60px 80px;
+    background-color: #38003c;
+}
+
+.table h1
+{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    padding-bottom: 40px;
+}
+
+.table-container table
+{
+    background-color: white;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th
+{
+    background-color: rgb(235, 235, 235);
+    padding: 15px 20px;
+    color: rgb(100, 100, 100);
+}
+
+.table-container table th, .table-container table td
+{
+    padding: 5px 20px;
+    border-bottom: 1px solid grey;
+}
+
+.table-container table tbody tr
+{
+    cursor: pointer;
+    transition: ease 0.35s all
+}
+
+.table-container table tbody tr:hover
+{
+    background-color: rgba(233, 0, 82);
+    color: white;
+}
+
+.table-container table td
+{
+    text-align: center;
+}
+
+.table-container table img
+{
+    width: 35px;
+}

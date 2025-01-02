@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import getLogo from '../../utils/helpers/GetLogo';
 import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 import '../home/Home.css';
 
 export default function Home()
@@ -102,31 +103,6 @@ export default function Home()
         return elements;
     };
 
-    function displayTable()
-    {
-        const elements = []
-
-        for(let i = 0; i < teams.length; i++)
-        {
-            elements.push(
-                <tr>
-                    <td>{i + 1}</td>
-                    <td><img src={import.meta.env.BASE_URL + `images/logos/${getLogo(teams[i]['Team'])}`}/></td>
-                    <td>{teams[i]['MP']}</td>
-                    <td>{teams[i]['W']}</td>
-                    <td>{teams[i]['D']}</td>
-                    <td>{teams[i]['L']}</td>
-                    <td>{teams[i]['GF']}</td>
-                    <td>{teams[i]['GA']}</td>
-                    <td>{teams[i]['GD']}</td>
-                    <td><b>{teams[i]['Pts']}</b></td>
-                </tr>
-            )
-        }
-
-        return elements;
-    }
-
     if(isLoading)
     {
         return (
@@ -137,6 +113,7 @@ export default function Home()
     return (
         <>
             <Header/>
+
             <section className="headline">
                 <h1>Next Fixture</h1>
                 <div className="next-fixture">
@@ -190,32 +167,7 @@ export default function Home()
                 </div>
             </section>
 
-            <section className="table">
-                <h1>Premier League Table</h1>
-                <div className="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Position</th>
-                                <th>Team</th>
-                                <th>MP</th>
-                                <th>W</th>
-                                <th>D</th>
-                                <th>L</th>
-                                <th>GF</th>
-                                <th>GA</th>
-                                <th>GD</th>
-                                <th>Pts</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                displayTable()
-                            }
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+            <Footer/>
         </>
     )
 };

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logoMapper from '../../utils/LogoMapper';
 import '../header/Header.css';
 import { IconContext } from "react-icons/lib";
-import { IoFootballOutline, IoLogoGithub, IoLogoLinkedin, IoMailOutline } from "react-icons/io5";
+import { IoFootballOutline, IoLogoGithub, IoLogoLinkedin, IoMailOutline, IoMenuOutline } from "react-icons/io5";
 
 export default function Header()
 {
@@ -31,25 +31,15 @@ export default function Header()
                     </IconContext.Provider>
                 </Link>
                 <div className="nav">
-                    <Link to="/">Home</Link>
-                    <Link to="/fixtures">Fixtures</Link>
-                    <Link to="/results">Results</Link>
-                    <Link to="/table">Table</Link>
+                    <Link to="/" reloadDocument={true}>Home</Link>
+                    <Link to="/fixtures" reloadDocument={true}>Fixtures</Link>
+                    <Link to="/results" reloadDocument={true}>Results</Link>
+                    <Link to="/table" reloadDocument={true}>Table</Link>
                 </div>
                 <div className="socials">
                     <a href="mailto:harmonyiroha99@gmail.com">
                         <IconContext.Provider value={{style: {fontSize: "23px"}, className: "header-icon"}}>
                             <IoMailOutline/>
-                        </IconContext.Provider>
-                    </a>
-                    <a href="https://www.linkedin.com/in/harmony-iroha/" target="_blank">
-                        <IconContext.Provider value={{style: {fontSize: "23px"}, className: "header-icon"}}>
-                            <IoLogoLinkedin/>
-                        </IconContext.Provider>
-                    </a>
-                    <a href="https://github.com/Harmones81" target="_blank">
-                        <IconContext.Provider value={{style: {fontSize: "23px"}, className: "header-icon"}}>
-                            <IoLogoGithub/>
                         </IconContext.Provider>
                     </a>
                 </div>
