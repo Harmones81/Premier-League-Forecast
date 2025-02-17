@@ -1,0 +1,251 @@
+/* Headline */
+
+.headline
+{
+    text-align: center;
+    align-items: center;
+    color: white;
+    padding: 40px 80px;
+    padding-bottom: 65px;
+    background: linear-gradient(250deg, rgba(4, 245, 255), rgba(233, 0, 82), rgba(0, 255, 135));
+}
+
+.headline h1
+{
+    font-size: 70px;
+}
+
+/* Next Fixture */
+
+.next-fixture
+{
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.next-fixture img
+{
+    width: 250px;
+}
+
+.next-fixture-info h1
+{
+    font-size: 40px;
+}
+
+.next-fixture-info p
+{
+    font-size: 15px;
+    color: rgb(231, 227, 227);
+}
+
+.next-fixture-team
+{
+    margin: auto;
+    width: 375px;
+    text-align: center;
+}
+
+.next-fixture-team p
+{
+    font-size: 23px;
+    font-weight: bolder;
+}
+
+.next-fixture-link
+{
+    text-decoration: none;
+}
+
+.next-fixture-link button
+{
+    border-radius: 100px;
+    border: solid 3px #38003c;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: ease 0.35s all;
+}
+
+.next-fixture-link button:hover
+{
+    opacity: 0.85;
+}
+
+/* Content */
+
+.content
+{
+    padding: 80px 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Next Gameweek */
+
+.next-gameweek
+{
+    width: 100%;
+}
+
+.next-gameweek h1
+{
+    text-align: center;
+    width: 100%;
+    color: white;
+    padding: 40px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #38003c;
+    border: 3px solid grey;
+    border-bottom: none;
+}
+
+.next-gameweek h1 p
+{
+    font-size: 15px;
+    padding: 10px;
+}
+
+.next-gameweek img
+{
+    width: 35px;
+    margin-right: 5px;
+}
+
+.next-gameweek ul
+{
+    list-style-type: none;
+    border: 3px solid grey;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.next-gameweek li
+{
+    border-top: 1px solid grey;
+    transition: ease 0.35s all
+}
+
+.next-gameweek li:hover:not(:last-child)
+{
+    background-color: rgb(235, 235, 235);
+}
+
+.next-gameweek li a
+{
+    padding: 25px;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.next-gameweek li:last-child
+{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.next-gameweek-team
+{
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+}
+
+.next-gameweek-info
+{
+    padding: 20px;
+    width: 200px;
+    text-align: left;
+    border-left: 1px solid gray;
+    font-size: 12px;
+}
+
+/* View All */
+
+.view-all
+{
+    width: 100%;
+    cursor: auto;
+}
+
+.view-all button
+{
+    width: 100%;
+    padding: 20px;
+    cursor: pointer;
+    color: #38003c;
+    border: 1px solid #38003c;
+    border-radius: 10px;
+    background-color: white;
+    transition: ease 0.35s all
+}
+
+.view-all button:hover
+{
+    background-color: #38003c;
+    color: white;
+}
+
+/* Responsive Elements */
+
+@media only screen and (max-width: 1100px) 
+{
+    .headline
+    {
+        padding: 40px 20px;
+    }
+
+    .headline h1
+    {
+        font-size: 30px;
+    }
+
+    .next-fixture img
+    {
+        width: 100px;
+    }
+
+    .next-fixture-info h1
+    {
+        font-size: 20px;
+    }
+
+    .next-fixture-info p
+    {
+        font-size: 10px;
+    }
+
+    .next-fixture-team
+    {
+        width: 150px;
+    }
+
+    .next-fixture-team p
+    {
+        font-size: 12px;
+    }
+
+    .content
+    {
+        padding: 40px 20px;
+    }
+
+    .next-gameweek img
+    {
+        width: 30px;
+    }
+
+    .next-gameweek-info
+    {
+        font-size: 12px;
+    }
+}

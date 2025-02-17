@@ -1,0 +1,35 @@
+/* Banner */
+
+.banner
+{
+    padding: 40px 80px;
+    padding-bottom: 65px;
+    text-align: center;
+}
+
+.banner h1
+{
+    font-size: 70px;
+    color: white;
+    font-weight: bolder;
+}
+
+.banner img
+{
+    width: 200px;
+}
+
+/* Responsive Elements */
+
+@media only screen and (max-width: 1000px) 
+{
+    .banner h1
+    {
+        font-size: 40px;
+    }
+
+    .banner img
+    {
+        width: 100px;
+    }
+}

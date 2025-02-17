@@ -1,0 +1,111 @@
+/* Content */
+
+.content
+{
+    padding: 80px 80px;
+}
+
+/* Gameweek Fixtures */
+
+.fixtures
+{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.gameweek-fixtures h1
+{
+    width: 100%;
+    background-color: #38003c;
+    padding: 10px;
+    color: white;
+    font-weight: bolder;
+}
+
+.gameweek-fixtures ul
+{
+    list-style-type: none;
+}
+
+.gameweek-fixtures li
+{
+    border-bottom: 1px solid rgb(205, 205, 205);
+}
+
+.gameweek-fixtures li a
+{
+    text-decoration: none;
+    padding: 20px 40px;
+    width: 100%;
+    color: #38003c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: ease 0.35s all;
+}
+
+.gameweek-fixtures li a:hover
+{
+    background-color: #9523ff;
+    color: white;
+}
+
+.gameweek-fixtures img
+{
+    width: 35px;
+}
+
+.fixture-teams, .fixture-team
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fixture-time
+{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(195, 192, 192);
+}
+
+.fixture-location p
+{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+}
+
+/* Responsive Elements */
+
+@media only screen and (max-width: 1000px)
+{
+    .content
+    {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .gameweek-fixtures h1
+    {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .gameweek-fixtures li a
+    {
+        padding: 10px 20px;
+    }
+
+    .fixture-teams
+    {
+        margin: auto;
+        font-size: 10px;
+    }
+
+    .fixture-location
+    {
+        display: none;
+    }
+}

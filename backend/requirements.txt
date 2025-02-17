@@ -1,0 +1,9 @@
+flask
+flask-cors
+flask-pymongo
+requests
+pandas
+bs4
+lxml
+onnxruntime
+python-dotenv
