@@ -99,7 +99,7 @@ export default function Home()
                         <p>{getTeamAlias(nextFixture['Away Team'])}</p>
                     </div>
                 </div>
-                <Link className="next-fixture-link" to="">
+                <Link className="next-fixture-link" to={`/fixtures/${nextFixture['Home Team']}/${nextFixture['Away Team']}`}>
                     <button>
                         <IconContext.Provider value={{style: {fontSize: "20px", color: "#38003c"}}}>
                             <IoOpenOutline/>

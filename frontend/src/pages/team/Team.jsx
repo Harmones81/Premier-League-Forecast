@@ -2,11 +2,8 @@ import { useEffect, useState } from "react";
 import Header from "../../components/header/Header";
 import Banner from "../../components/banner/Banner";
 import getLogo from "../../utils/helpers/GetLogo";
-import getTeamAlias from "../../utils/helpers/GetTeamAlias";
 import "../team/Team.css";
-import { Link, useParams } from "react-router-dom";
-import { IconContext } from "react-icons/lib";
-import { IoLocationOutline } from "react-icons/io5";
+import { useParams } from "react-router-dom";
 import teamMapper from "../../utils/TeamMapper";
 
 export default function Team()

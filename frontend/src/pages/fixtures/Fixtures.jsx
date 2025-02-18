@@ -45,7 +45,7 @@ export default function Fixtures()
                         {
                             group.map((item, idx) => (
                                 <li key={idx}>
-                                    <Link>
+                                    <Link to={`/fixtures/${item['Home Team']}/${item['Away Team']}`}>
                                         <div className="fixture-teams">
                                             <div className="fixture-team">
                                                 <p><b>{getTeamAlias(item["Home Team"])}</b></p>

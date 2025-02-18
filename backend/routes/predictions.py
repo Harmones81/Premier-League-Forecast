@@ -34,7 +34,7 @@ def dist_to_dict(dist) -> dict:
 def get_xG(home_team: str, away_team: str):
     """Provides the expected goals for the specified teams"""
     home_xG, away_xG = expected_goals(home_team, away_team)
-    results = {'home_xG': home_xG, 'away_xG': away_xG}
+    results = {'home_xG': f'{home_xG:.2f}', 'away_xG': f'{away_xG:.2f}'}
     return jsonify(results), 200
 
 @predictions_route.route('/api/predictions/score/<home_team>/<away_team>', methods=['GET'])

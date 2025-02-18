@@ -1,0 +1,162 @@
+/* Headline */
+
+.prediction-headline
+{
+    text-align: center;
+    color: white;
+    padding: 40px 80px;
+    padding-bottom: 65px;
+    background: linear-gradient(250deg, rgba(4, 245, 255), rgba(233, 0, 82), rgba(0, 255, 135));
+}
+
+/* Predicted Fixture */
+
+.prediction-heading
+{
+    margin-bottom: 20px;
+}
+
+.prediction-heading h1
+{
+    font-size: 70px;
+}
+
+.prediction-heading p
+{
+    font-size: 15px;
+}
+
+.fixture-prediction
+{
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.fixture-prediction img
+{
+    width: 250px;
+}
+
+.fixture-prediction-score
+{
+    font-size: 60px;
+}
+
+.fixture-prediction-team
+{
+    margin: auto;
+    width: 375px;
+    text-align: center;
+}
+
+.fixture-prediction-team p
+{
+    font-size: 23px;
+    font-weight: bolder;
+}
+
+/* Content */
+
+.prediction-content
+{
+    padding: 80px 80px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+/* Expected Goal */
+
+.xG
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    text-align: left;
+}
+
+.team-xG
+{
+    padding: 25px;
+    border-radius: 5px;
+    background: repeating-linear-gradient(
+        45deg,
+        #ffffff,
+        #ffffff 80px,
+        #ebebeb 80px,
+        #ebebeb 160px
+    );
+    color: #38003c;
+    flex: 1 1 100%;
+    border: 3px solid rgb(205, 205, 205);
+}
+
+.team-xG-label
+{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.team-xG-data
+{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Responsive Elements */
+
+@media only screen and (max-width: 1400px) 
+{
+    .prediction-headline
+    {
+        padding: 40px 20px;
+    }
+
+    .prediction-heading h1
+    {
+        font-size: 40px;
+    }
+
+    .predicted-heading p
+    {
+        font-size: 10px;
+    }
+
+    .fixture-prediction img
+    {
+        width: 100px;
+    }
+
+    .fixture-prediction-score
+    {
+        font-size: 20px;
+    }
+
+    .fixture-prediction-team
+    {
+        width: 150px;
+    }
+
+    .fixture-prediction-team p
+    {
+        font-size: 15px;
+    }
+
+    .prediction-content
+    {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .team-xG-label
+    {
+        font-size: 15px;
+    }
+
+    .team-xG-data
+    {
+        font-size: 25px;
+    }
+}
