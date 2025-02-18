@@ -107,7 +107,7 @@ export default function Home()
                     </button>
                 </Link>
             </section>
-            <section className="content">
+            <section className="home-content">
                 <div className="next-gameweek">
                     <h1>
                         Next Gameweek

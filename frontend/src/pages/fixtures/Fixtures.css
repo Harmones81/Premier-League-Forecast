@@ -1,6 +1,6 @@
 /* Content */
 
-.content
+.fixtures-content
 {
     padding: 80px 80px;
 }
@@ -77,6 +77,11 @@
     font-size: 15px;
 }
 
+.fixture-date
+{
+    font-size: 15px;
+}
+
 /* Responsive Elements */
 
 @media only screen and (max-width: 1000px)
@@ -105,6 +110,11 @@
     }
 
     .fixture-location
+    {
+        display: none;
+    }
+
+    .fixture-date
     {
         display: none;
     }

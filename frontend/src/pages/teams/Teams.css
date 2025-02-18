@@ -1,0 +1,51 @@
+/* Content */
+
+.teams-content
+{
+    padding: 80px 80px;
+}
+
+/* Teams */
+
+.teams
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style-type: none;
+}
+
+.teams img
+{
+    padding: 0;
+    width: 80px;
+}
+
+.teams li a
+{
+    color: #38003c;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.teams li a:hover
+{
+    color: white;
+}
+
+.team-logo
+{
+    margin-bottom: 10px;
+}
+
+.team-name
+{
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

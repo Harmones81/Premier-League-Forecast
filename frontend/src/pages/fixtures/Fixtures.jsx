@@ -59,6 +59,9 @@ export default function Fixtures()
                                                 <p><b>{getTeamAlias(item["Away Team"])}</b></p>
                                             </div>
                                         </div>
+                                        <div className="fixture-date">
+                                            <p>{item['Date']}</p>
+                                        </div>
                                         <div className="fixture-location">
                                             <p>
                                                 <IconContext.Provider value={{style: {fontSize: ""}}}>
@@ -92,7 +95,7 @@ export default function Fixtures()
             <Banner primaryColor={"#3cacfc"} secondaryColor={"#5c84fc"}>
                 <h1>Fixtures</h1>
             </Banner>
-            <section className="content">
+            <section className="fixtures-content">
                 <div className="fixtures">
                     {
                         displayFixtures()
