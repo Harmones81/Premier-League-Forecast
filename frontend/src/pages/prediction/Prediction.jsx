@@ -3,7 +3,6 @@ import Header from "../../components/header/Header";
 import getLogo from "../../utils/helpers/GetLogo";
 import "../prediction/Prediction.css";
 import { useParams } from "react-router-dom";
-import teamMapper from "../../utils/TeamMapper";
 import getTeamAlias from "../../utils/helpers/GetTeamAlias";
 
 export default function Prediction()
