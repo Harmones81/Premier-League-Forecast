@@ -81,8 +81,8 @@ def get_league_statistics():
 def get_team_statistics(team_name: str):
     """Provides statistics for the specified team"""
     try:
-        a_rating = att_rating(team_name)
-        d_rating = def_rating(team_name)
+        a_rating = f'{att_rating(team_name):.2f}'
+        d_rating = f'{def_rating(team_name):.2f}'
 
         team_statistics = {
             'att_rating': a_rating,

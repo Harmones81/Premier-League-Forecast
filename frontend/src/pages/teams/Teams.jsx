@@ -39,11 +39,38 @@ export default function Teams()
         {
             elements.push(
                 <TeamContainer 
-                    name={getTeamAlias(teams[i]['Team'])} 
+                    key={i}
+                    name={teams[i]['Team']} 
                     img={import.meta.env.BASE_URL + `logos/${getLogo(teams[i]['Team'])}`}
                     primaryColor={teamMapper[teams[i]['Team']][2]}
                     secondaryColor={teamMapper[teams[i]['Team']][3]}
                 />
+            )
+        }
+
+        return elements;
+    };
+
+    function displayResponsiveTeams()
+    {
+        const elements = [];
+
+        for(let i = 0; i < teams.length; i++)
+        {
+            elements.push(
+                <li key={i}>
+                    <Link to={`/teams/${teams[i]['Team']}`}>
+                        <div className="team">
+                            <img src={import.meta.env.BASE_URL + `logos/${getLogo(teams[i]['Team'])}`}/>
+                            <p>{getTeamAlias(teams[i]['Team'])}</p>
+                        </div>
+                        <span>
+                            <IconContext.Provider value={{style: {fontSize: "18px"}}}>
+                                <IoArrowForwardOutline/>
+                            </IconContext.Provider>
+                        </span>
+                    </Link>
+                </li>
             )
         }
 
@@ -68,6 +95,12 @@ export default function Teams()
                     <ul className="teams">
                         {
                             displayTeams()
+                        }
+                    </ul>
+
+                    <ul className="responsive-teams">
+                        {
+                            displayResponsiveTeams()
                         }
                     </ul>
                 </div>
@@ -115,7 +148,7 @@ function TeamContainer({name, img, primaryColor, secondaryColor})
                     <img src={img}/>
                 </div>
                 <div className="team-name">
-                    <h1>{name}</h1>
+                    <h1>{getTeamAlias(name)}</h1>
                     <span>
                         <IconContext.Provider value={{style: {fontSize: "18px"}}}>
                             <IoArrowForwardOutline/>

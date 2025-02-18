@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { IconContext } from "react-icons/lib";
 import { IoFootballOutline, IoMailOutline, IoMenuOutline } from "react-icons/io5";
 import teamMapper from "../../utils/TeamMapper";
+import getTeamAlias from "../../utils/helpers/GetTeamAlias";
 import '../header/Header.css';
 
 export default function Header()
