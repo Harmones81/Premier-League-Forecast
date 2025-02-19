@@ -39,6 +39,31 @@ export default function Prediction()
 
     }, [homeTeam, awayTeam]);
 
+    function displayGoalDistribution(distType)
+    {
+        let selectedDist = {};
+        const elements = [];
+
+        switch(distType)
+        {
+            case 'home': selectedDist = scoreDistribution['home_dist'];
+                break;
+            case 'away': selectedDist = scoreDistribution['away_dist'];
+                break;
+        }
+
+        Object.entries(selectedDist).map(([key, value]) => {
+            elements.push(
+                <li>
+                    <p className="goal-amount">{key}</p>
+                    <p className="goal-percentage"><b>{(value * 100).toFixed(2)}%</b></p>
+                </li>
+            )
+        })
+
+        return elements;
+    }
+
     if(isLoading)
     {
         return (
@@ -76,6 +101,30 @@ export default function Prediction()
                     <div className="team-xG">
                         <p className="team-xG-label">{getTeamAlias(awayTeam)}'s xG</p>
                         <p className="team-xG-data">{xGPrediction['away_xG']}</p>
+                    </div>
+                </div>
+                <div className="distributions">
+                    <div className="distributions-container">
+                        <h1>
+                            {getTeamAlias(homeTeam)}'s
+                            <p>Goal Distribution</p>
+                        </h1>
+                        <ul>
+                            {
+                                displayGoalDistribution('home')
+                            }
+                        </ul>
+                    </div>
+                    <div className="distributions-container">
+                        <h1>
+                            {getTeamAlias(awayTeam)}'s
+                            <p>Goal Distribution</p>
+                        </h1>
+                        <ul>
+                            {
+                                displayGoalDistribution('away')
+                            }
+                        </ul>
                     </div>
                 </div>
             </section>

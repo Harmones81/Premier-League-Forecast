@@ -61,9 +61,6 @@
 .prediction-content
 {
     padding: 80px 80px;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
 }
 
 /* Expected Goal */
@@ -72,6 +69,7 @@
 {
     display: flex;
     align-items: center;
+    margin-bottom: 40px;
     gap: 15px;
     width: 100%;
     text-align: left;
@@ -85,8 +83,8 @@
         45deg,
         #ffffff,
         #ffffff 80px,
-        #ebebeb 80px,
-        #ebebeb 160px
+        #f7f5f7 80px,
+        #f7f5f7 160px
     );
     color: #38003c;
     flex: 1 1 100%;
@@ -103,6 +101,64 @@
 {
     font-size: 40px;
     font-weight: bold;
+}
+
+/* Distributions */
+
+.distributions
+{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.distributions-container
+{
+    width: 650px;
+}
+
+.distributions-container h1
+{
+    text-align: center;
+    width: 100%;
+    color: white;
+    padding: 40px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #38003c;
+    border: 3px solid grey;
+    border-bottom: none;
+}
+
+.distributions-container ul
+{
+    list-style-type: none;
+    border: 3px solid grey;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.distributions-container li
+{
+    color: #38003c;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid grey;
+}
+
+.goal-amount
+{
+    border-right: 1px solid grey;
+    width: 100px;
+    padding: 15px;
+}
+
+.goal-percentage
+{
+    padding: 15px;
 }
 
 /* Responsive Elements */
@@ -158,5 +214,16 @@
     .team-xG-data
     {
         font-size: 25px;
+    }
+
+    .distributions
+    {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .distributions-container
+    {
+        width: 100%;
     }
 }

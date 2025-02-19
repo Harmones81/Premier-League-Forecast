@@ -118,10 +118,10 @@ function TeamContainer({name, img, primaryColor, secondaryColor})
         borderRadius: `5px`,
         background: `repeating-linear-gradient(
                         45deg, 
-                        #f2f2f2, 
-                        #f2f2f2 80px, 
-                        #cecdcd 80px, 
-                        #cecdcd 160px)`,
+                        #ffffff, 
+                        #ffffff 80px, 
+                        #f7f5f7 80px, 
+                        #f7f5f7 160px)`,
         border: `3px solid rgb(205, 205, 205)`,
         flex: `1 1 300px`,
         transition: `ease, 0.35s all`
