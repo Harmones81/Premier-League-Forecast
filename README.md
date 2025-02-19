@@ -33,33 +33,33 @@ To use/test the application, make sure you have these installed:
 
 **Backend (Flask)**
 
-1. Clone the repository
-   `git clone https://github.com/yourusername/premier-league-forecast.git`
+1. Clone the repository\
+   `git clone https://github.com/yourusername/premier-league-forecast.git`\
    `cd premier-league-forecast`
    
-2. Navigate to the backend folder, create a virtual environment, and activate it
-   `cd backend`
-   `python -m venv .venv`
+2. Navigate to the backend folder, create a virtual environment, and activate it\
+   `cd backend`\
+   `python -m venv .venv`\
    `source .venv/bin/activate  # On Windows use .venv\Scripts\activate`
    
-3. Install backend dependencies
+3. Install backend dependencies\
    `pip install -r requirements.txt`
 
 4. Set up your MongoDB connection by running a local MongoDB instance and adding a .env file with your MongoDB connection string
    
-5. Run the Flask server
+5. Run the Flask server\
    `python main.py`
 
 **Frontend (React)**
 
-1. Navigate to the frontend directory
+1. Navigate to the frontend directory\
    `cd frontend`
 
-2. Install dependencies
-   `npm install`
+2. Install dependencies\
+   `npm install`\
    `npm install react-icons --save`
 
-3. Start the React app
+3. Start the React app\
    `npm run dev`
 
 ## API Endpoints
