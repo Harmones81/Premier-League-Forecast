@@ -34,47 +34,66 @@ To use/test the application, make sure you have these installed:
 **Backend (Flask)**
 
 1. Clone the repository
-   > git clone https://github.com/yourusername/premier-league-forecast.git
-   > cd premier-league-forecast
+   `git clone https://github.com/yourusername/premier-league-forecast.git`
+   `cd premier-league-forecast`
    
 2. Navigate to the backend folder, create a virtual environment, and activate it
-   > cd backend
-   > python -m venv .venv
-   > source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
+   `cd backend`
+   `python -m venv .venv`
+   `source .venv/bin/activate  # On Windows use .venv\Scripts\activate`
    
 3. Install backend dependencies
-   > pip install -r requirements.txt
+   `pip install -r requirements.txt`
 
 4. Set up your MongoDB connection by running a local MongoDB instance and adding a .env file with your MongoDB connection string
    
 5. Run the Flask server
-   > python main.py
+   `python main.py`
 
 **Frontend (React)**
 
 1. Navigate to the frontend directory
-   > cd frontend
+   `cd frontend`
 
 2. Install dependencies
-   > npm install
-   > npm install react-icons --save
+   `npm install`
+   `npm install react-icons --save`
 
 3. Start the React app
-   > npm run dev
+   `npm run dev`
 
 ## API Endpoints
 
 ### Database
 
-- `/api/update/teams` - Updates the teams collection in the database
-- `/api/update/fixtures` - Updates the fixtures collection in the database
+- `/api/update/teams` - Updates the teams collection 
+- `/api/update/fixtures` - Updates the fixtures collection 
 
 ### Fixtures
 
-- **GET** `/api/fixtures` - Retrieves all the fixtures in the fixtures collection
-- **GET** `/api/fixtures/next` - Retrieves the first upcoming fixture in the fixtures collection
+- **GET** `/api/fixtures` - Retrieves all the fixtures from the database
+- **GET** `/api/fixtures/next` - Retrieves the first upcoming fixture from the database
 - **GET** `/api/fixtures/gameweek/<gameweek_id>` - Retrieves the fixtures from the specified gameweek
 - **GET** `/api/fixtures/gameweek/current` - Retrieves the fixtures from the current gameweek
 - **GET** `/api/fixtures/gameweek/next` - Retrieves the fixtures from the next gameweek
 - **GET** `api/fixtures/<team>` - Retrieves all the fixtures for the specified team
 
+### Teams
+
+- **GET** `/api/teams` - Retrieves all the teams from the database
+- **GET** `/api/teams/<team_name>` - Retrieves the specified team from the database
+
+### Statistics
+
+- **GET** `/api/statistics` - Retrieves the general statistics for the league as a whole
+- **GET** `/api/statistics/<team_name>` - Retrieves the general statistics for the specified team
+
+### Predictions
+
+- **GET** `/api/predictions/xG/<home_team>/<away_team>` - Retrieves the xG (expected goals) for the home and away team
+- **GET** `/api/predictions/score/<home_team>/<away_team>` - Retrieves the predicted score between the home and away team
+- **GET** `/api/predictions/dist/<home_team>/<away_team>` - Retrieves the predicted goal distribution between the home and away team
+
+### Status
+
+- **GET** `/api/status/gameweek` - Retrieves the current and next gameweek id/number
