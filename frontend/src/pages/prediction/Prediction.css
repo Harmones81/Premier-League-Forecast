@@ -115,7 +115,7 @@
 
 .distributions-container
 {
-    width: 650px;
+    flex: 1 1 100%;
 }
 
 .distributions-container h1
