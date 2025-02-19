@@ -28,3 +28,53 @@ To use/test the application, make sure you have these installed:
 - Python (>= 3.8)
 - Node.js & npm
 - MongoDB
+
+## Set-up
+
+**Backend (Flask)**
+
+1. Clone the repository
+   > git clone https://github.com/yourusername/premier-league-forecast.git
+   > cd premier-league-forecast
+   
+2. Navigate to the backend folder, create a virtual environment, and activate it
+   > cd backend
+   > python -m venv .venv
+   > source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
+   
+3. Install backend dependencies
+   > pip install -r requirements.txt
+
+4. Set up your MongoDB connection by running a local MongoDB instance and adding a .env file with your MongoDB connection string
+   
+5. Run the Flask server
+   > python main.py
+
+**Frontend (React)**
+
+1. Navigate to the frontend directory
+   > cd frontend
+
+2. Install dependencies
+   > npm install
+   > npm install react-icons --save
+
+3. Start the React app
+   > npm run dev
+
+## API Endpoints
+
+### Database
+
+- `/api/update/teams` - Updates the teams collection in the database
+- `/api/update/fixtures` - Updates the fixtures collection in the database
+
+### Fixtures
+
+- **GET** `/api/fixtures` - Retrieves all the fixtures in the fixtures collection
+- **GET** `/api/fixtures/next` - Retrieves the first upcoming fixture in the fixtures collection
+- **GET** `/api/fixtures/gameweek/<gameweek_id>` - Retrieves the fixtures from the specified gameweek
+- **GET** `/api/fixtures/gameweek/current` - Retrieves the fixtures from the current gameweek
+- **GET** `/api/fixtures/gameweek/next` - Retrieves the fixtures from the next gameweek
+- **GET** `api/fixtures/<team>` - Retrieves all the fixtures for the specified team
+
