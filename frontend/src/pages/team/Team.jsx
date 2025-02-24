@@ -89,7 +89,7 @@ export default function Team()
                             </li>
                             <li>
                                 <p>Goals per match</p>
-                                <p><b>{data['GF'] / data['MP']}</b></p>
+                                <p><b>{(data['GF'] / data['MP']).toFixed(2)}</b></p>
                             </li>
                             <li>
                                 <p>Attack rating</p>
@@ -106,7 +106,7 @@ export default function Team()
                             </li>
                             <li>
                                 <p>Goals conceded per match</p>
-                                <p><b>{data['GA'] / data['MP']}</b></p>
+                                <p><b>{(data['GA'] / data['MP']).toFixed(2)}</b></p>
                             </li>
                             <li>
                                 <p>Defense rating</p>
